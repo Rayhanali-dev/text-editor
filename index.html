@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <section class="h-screen flex items-center justify-center">
+        <div class="main-body w-2/3 p-5 bg-green-900 text-white">
+            <div class="container">
+                <div>
+                    <h1 class="text-5xl text-center mb-7 capitalize">Simple Text Editor</h1>
+                </div>
+                <div class="grid grid-cols-3 text-center">
+                    <div>
+                        <button id="text-bold" class="p-2" type="button">B</button>
+                        <button id="text-italic" class="mx-2 p-2" type="button">I</button>
+                        <button id="text-underline" class="p-2" type="button">U</button>
+                    </div>
+                    <div>
+                        <button id="text-left" class="p-2 mx-2" type="button"><i class="fa-solid fa-align-left"></i></button>
+                        <button id="text-center" class="p-2 mx-2" type="button"><i class="fa-solid fa-align-center"></i></button>
+                        <button id="text-right" class="p-2 mx-2" type="button"><i class="fa-solid fa-align-right"></i></button>
+                        <button id="text-justify" class="p-2 mx-2" type="button"><i class="fa-solid fa-align-justify"></i></button>
+                    </div>
+                    <div class="py-2 flex justify-center">
+                        <input id="font-size" class="w-12" type="number" value="16">
+                        <ul>
+                            <li class="mx-4 relative group ">Aa
+                                <ul class="absolute hidden group-hover:block -left-2/3 rk text-left bg-zinc-700 p-3">
+                                    <li id="text-uppercase" class="cursor-pointer">UPPERCASE</li>
+                                    <li id="lowercase" class="cursor-pointer my-1">lowercase</li>
+                                    <li id="capitalize" class="cursor-pointer my-1">Capitalize</li>
+                                    <li id="normal-case" class="cursor-pointer">none</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <input id="font-color" type="color">
+                    </div>
+                </div>
+                <div>
+                    <textarea id="text-field" class="w-full h-52 p-3 bg-transparent border mt-9" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
